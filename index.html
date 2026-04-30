@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GREENWAY ULUDAĞ HARD ENDURO 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow+Condensed:ital,wght@0,300;0,400;0,600;0,700;0,900;1,400&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --g:#2D8C00;--gb:#38B000;--o:#FF5E00;--ol:#FF7A2E;
+  --dk:#07090A;--dk2:#0E1410;--dk3:#161C10;
+  --gy:#8A9080;--lt:#E8EDE0;--yw:#D4A017;--sv:#A8B0B8;--bz:#CD7F32;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--dk);color:var(--lt);font-family:'Barlow',sans-serif;overflow-x:hidden}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:14px 48px;background:linear-gradient(to bottom,rgba(7,9,10,.97),rgba(7,9,10,.4));backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.05);transition:background .3s}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:4px;color:var(--gb);text-decoration:none}
+.nav-logo span{color:var(--o)}
+.nav-links{display:flex;gap:28px;list-style:none}
+.nav-links a{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(232,237,224,.8);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--o)}
+.nav-cta{background:var(--o)!important;color:#fff!important;padding:7px 18px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 100%,10px 100%)}
+@keyframes navPulse{0%,100%{opacity:1}50%{opacity:.55}}
+@media(max-width:900px){.nav-links{display:none}.nav-logo{font-size:16px}nav{padding:12px 20px}}
+
+/* ── HERO YouTube BG ── */
+.hero-yt-wrap{position:absolute;inset:0;overflow:hidden;z-index:0;background:#000}
+.hero-yt-wrap iframe{position:absolute;top:50%;left:50%;width:177.78vh;height:100vh;min-width:100%;min-height:56.25vw;transform:translate(-50%,-50%);border:none;pointer-events:none}
+/* ── HERO ── */
+.hero{position:relative;height:100vh;min-height:650px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.04)}
+.hero-img{position:absolute;inset:0;background-image:url('Copilot_20260427_013522.png');background-size:cover;background-position:center top;transform:scale(1.04);animation:hzoom 25s ease-in-out infinite alternate}
+@keyframes hzoom{from{transform:scale(1.04)}to{transform:scale(1.12)}}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,9,10,.15) 0%,rgba(7,9,10,.02) 30%,rgba(7,9,10,.5) 72%,rgba(7,9,10,1) 100%)}
+.hero-c{position:relative;z-index:2;text-align:center;padding:0 24px;margin-top:50px}
+.eyebrow{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:6px;text-transform:uppercase;color:var(--o);margin-bottom:14px;opacity:0;animation:fup .8s .3s forwards}
+.h-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(68px,12vw,140px);line-height:.9;letter-spacing:3px;color:#fff;text-shadow:0 4px 40px rgba(0,0,0,.6);opacity:0;animation:fup .8s .5s forwards}
+.h-title .g{color:var(--gb)}
+.h-sub{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,4.5vw,48px);letter-spacing:8px;color:var(--o);margin-top:6px;opacity:0;animation:fup .8s .7s forwards}
+.h-date{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:300;letter-spacing:4px;color:rgba(232,237,224,.75);margin-top:18px;opacity:0;animation:fup .8s .9s forwards}
+.h-stats{display:flex;gap:40px;justify-content:center;align-items:center;margin-top:36px;opacity:0;animation:fup .8s 1.1s forwards;flex-wrap:wrap}
+.hstat{text-align:center}
+.hstat-v{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--gb);line-height:1}
+.hstat-l{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gy);margin-top:3px}
+.hdiv{width:1px;height:44px;background:rgba(232,237,224,.15)}
+.h-btns{display:flex;gap:14px;justify-content:center;margin-top:36px;opacity:0;animation:fup .8s 1.3s forwards;flex-wrap:wrap}
+.btn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:3px;text-transform:uppercase;padding:13px 32px;text-decoration:none;cursor:pointer;border:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 100%,10px 100%);transition:all .2s;display:inline-block}
+.btn-p{background:var(--o);color:#fff}
+.btn-p:hover{background:var(--ol);transform:translateY(-2px)}
+.btn-s{background:transparent;color:var(--lt);border:1px solid rgba(232,237,224,.35)}
+.btn-s:hover{border-color:var(--gb);color:var(--gb);transform:translateY(-2px)}
+@keyframes fup{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── COUNTDOWN ── */
+.cd-band{background:var(--g);padding:14px 24px;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap}
+.cd-lbl{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.7)}
+.cd-timer{display:flex;gap:20px;align-items:center}
+.cd-unit{text-align:center}
+.cd-num{font-family:'Bebas Neue',sans-serif;font-size:30px;color:#fff;line-height:1}
+.cd-ul{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.6);font-family:'Barlow Condensed',sans-serif;text-transform:uppercase}
+
+/* ── SECTIONS ── */
+section{padding:90px 48px;max-width:1300px;margin:0 auto}
+.stag{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:5px;text-transform:uppercase;color:var(--o);margin-bottom:10px}
+.stitle{font-family:'Bebas Neue',sans-serif;font-size:clamp(44px,6vw,76px);letter-spacing:2px;line-height:.95;color:var(--lt)}
+.stitle .a{color:var(--gb)}
+.div-line{width:56px;height:3px;background:linear-gradient(to right,var(--o),transparent);margin:18px 0 38px}
+
+/* ── PROGRAM ── */
+.pg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--dk3);margin-top:8px}
+.pg-day{background:var(--dk2);padding:28px;border-top:3px solid transparent;transition:border-color .3s}
+.pg-day:hover{border-top-color:var(--o)}
+.pg-num{font-family:'Bebas Neue',sans-serif;font-size:64px;color:var(--dk3);line-height:1}
+.pg-dt{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:var(--o);margin-bottom:4px}
+.pg-sub{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gy);margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06)}
+.pg-row{display:flex;gap:14px;margin-bottom:12px;align-items:flex-start}
+.pg-t{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:1px;color:var(--gb);min-width:88px;font-weight:700;padding-top:2px;white-space:nowrap}
+.pg-d{font-family:'Barlow',sans-serif;font-size:13px;color:rgba(232,237,224,.7);line-height:1.5}
+@media(max-width:768px){.pg-grid{grid-template-columns:1fr}}
+
+/* ── RACE INFO ── */
+.race-wrap{background:var(--dk2);padding:0;margin:0;max-width:100%}
+.race-in{max-width:1300px;margin:0 auto;padding:90px 48px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.etap-list{margin-top:28px}
+.etap-item{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.etap-ico{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.e-bz{background:rgba(205,127,50,.12);border:1px solid var(--bz)}
+.e-sv{background:rgba(168,176,184,.12);border:1px solid var(--sv)}
+.e-gd{background:rgba(212,160,23,.12);border:1px solid var(--yw)}
+.etap-nm{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.e-bz .etap-nm{color:var(--bz)}.e-sv .etap-nm{color:var(--sv)}.e-gd .etap-nm{color:var(--yw)}
+.etap-s{font-family:'Barlow',sans-serif;font-size:12px;color:var(--gy);margin-top:2px}
+.prize-cards{display:grid;gap:10px;margin-top:28px}
+.pcard{display:flex;align-items:center;gap:18px;padding:18px 22px;background:var(--dk);position:relative;overflow:hidden}
+.pcard::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px}
+.p1::before{background:var(--yw)}.p2::before{background:var(--sv)}.p3::before{background:var(--bz)}
+.prank{font-family:'Bebas Neue',sans-serif;font-size:34px;min-width:38px}
+.p1 .prank{color:var(--yw)}.p2 .prank{color:var(--sv)}.p3 .prank{color:var(--bz)}
+.pamt{font-family:'Bebas Neue',sans-serif;font-size:26px;color:#fff}
+.pdet{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gy);text-transform:uppercase}
+.ptot{margin-top:18px;padding:14px 22px;background:linear-gradient(135deg,rgba(45,140,0,.2),rgba(45,140,0,.05));border:1px solid rgba(45,140,0,.3);text-align:center;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gb)}
+.ptot strong{font-family:'Bebas Neue';font-size:22px;display:block;margin-top:4px;color:#fff}
+@media(max-width:768px){.race-in{grid-template-columns:1fr;gap:40px}}
+
+/* ── GALLERY ── */
+.gallery-grid{columns:4;column-gap:6px;margin-top:36px}
+.gitem{break-inside:avoid;margin-bottom:6px;overflow:hidden;position:relative;cursor:pointer}
+.gitem img{width:100%;display:block;transition:transform .5s;filter:brightness(.9) saturate(1.1)}
+.gitem:hover img{transform:scale(1.06);filter:brightness(1) saturate(1.3)}
+.gitem::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(255,94,0,.25),transparent);opacity:0;transition:opacity .3s}
+.gitem:hover::after{opacity:1}
+@media(max-width:900px){.gallery-grid{columns:2}}
+@media(max-width:500px){.gallery-grid{columns:1}}
+
+/* ── FORM SECTION ── */
+.form-wrap{background:var(--dk2);padding:0;margin:0;max-width:100%}
+.form-in{max-width:1300px;margin:0 auto;padding:90px 48px;display:grid;grid-template-columns:1fr 1.4fr;gap:72px;align-items:start}
+.info-block{margin-bottom:28px}
+.info-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--o);margin-bottom:7px}
+.info-val{font-family:'Barlow Condensed',sans-serif;font-size:15px;color:var(--lt);line-height:1.7}
+.iban-box{font-family:'Bebas Neue';font-size:17px;letter-spacing:2px;color:var(--gb);background:rgba(45,140,0,.1);padding:10px 14px;border-left:3px solid var(--gb);margin-top:6px;word-break:break-all}
+.il-list{font-family:'Barlow',sans-serif;font-size:12px;color:var(--gy);line-height:1.6;margin-top:4px;max-height:80px;overflow:hidden;position:relative}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ff{display:flex;flex-direction:column;gap:5px}
+.ff label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gy)}
+.ff input,.ff select,.ff textarea{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:var(--lt);padding:11px 14px;font-family:'Barlow',sans-serif;font-size:13px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.ff select{cursor:pointer}
+.ff select option{background:#0e1410;color:var(--lt)}
+.ff input:focus,.ff select:focus,.ff textarea:focus{border-color:var(--o)}
+.ff.full{grid-column:1/-1}
+.ff textarea{resize:vertical;min-height:80px}
+.file-zone{background:rgba(255,255,255,.03);border:1px dashed rgba(255,255,255,.15);padding:14px;display:flex;flex-direction:column;gap:8px;transition:border-color .2s}
+.file-zone:hover{border-color:var(--o)}
+.file-zone label{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gy)}
+.file-btn{display:inline-flex;align-items:center;gap:8px;background:rgba(255,94,0,.12);border:1px solid rgba(255,94,0,.3);color:var(--o);padding:8px 16px;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.file-btn:hover{background:rgba(255,94,0,.2)}
+.file-btn input[type=file]{display:none}
+.file-name{font-size:12px;color:var(--gy);font-family:'Barlow',sans-serif}
+.radio-group{display:flex;gap:16px;flex-wrap:wrap}
+.radio-opt{display:flex;align-items:center;gap:6px;cursor:pointer;font-family:'Barlow',sans-serif;font-size:13px;color:var(--lt)}
+.radio-opt input{accent-color:var(--o)}
+.submit-btn{grid-column:1/-1;margin-top:6px}
+.submit-btn button{width:100%;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;letter-spacing:4px;text-transform:uppercase;background:var(--o);color:#fff;padding:16px;border:none;cursor:pointer;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 100%,10px 100%);transition:background .2s}
+.submit-btn button:hover{background:var(--ol)}
+.form-note{grid-column:1/-1;font-family:'Barlow',sans-serif;font-size:12px;color:var(--gy);text-align:center;padding-top:8px}
+.success-msg{display:none;grid-column:1/-1;background:rgba(56,176,0,.15);border:1px solid var(--gb);padding:18px;text-align:center;font-family:'Barlow Condensed',sans-serif;font-size:16px;letter-spacing:2px;color:var(--gb)}
+@media(max-width:768px){.form-in{grid-template-columns:1fr;gap:40px}.form-grid{grid-template-columns:1fr}}
+
+/* ── CONTACT ── */
+.c-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--dk3);margin-top:36px}
+.ccard{background:var(--dk2);padding:28px;border-bottom:3px solid transparent;transition:border-color .3s}
+.ccard:hover{border-bottom-color:var(--gb)}
+.ccard-ico{font-size:26px;margin-bottom:14px}
+.ccard-t{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gy);margin-bottom:7px}
+.ccard-v{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:700;color:var(--lt);line-height:1.5}
+.ccard-v a{color:var(--gb);text-decoration:none}
+@media(max-width:768px){.c-grid{grid-template-columns:1fr}}
+
+/* ── FOOTER ── */
+footer{background:var(--dk);border-top:1px solid rgba(255,255,255,.05);padding:36px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.foot-brand{font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:4px;color:var(--gb)}
+.foot-brand span{color:var(--o)}
+.foot-copy{font-family:'Barlow',sans-serif;font-size:12px;color:var(--gy);text-align:center}
+.foot-social{display:flex;gap:12px}
+.foot-social a{width:34px;height:34px;border:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:var(--gy);text-decoration:none;font-size:12px;font-family:'Barlow Condensed',sans-serif;transition:all .2s}
+.foot-social a:hover{border-color:var(--o);color:var(--o)}
+
+/* ── LIGHTBOX ── */
+.lb{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.96);align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb img{max-width:92vw;max-height:90vh;object-fit:contain}
+.lb-x{position:absolute;top:20px;right:28px;font-size:28px;color:#fff;cursor:pointer;font-family:'Bebas Neue';letter-spacing:2px;opacity:.7;transition:opacity .2s}
+.lb-x:hover{opacity:1}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);font-family:'Bebas Neue';font-size:32px;color:rgba(255,255,255,.5);cursor:pointer;padding:16px;transition:color .2s;user-select:none}
+.lb-nav:hover{color:#fff}
+.lb-prev{left:12px}.lb-next{right:12px}
+
+/* ── TICKER ── */
+.ticker-wrap{background:var(--dk2);border-top:2px solid var(--o);border-bottom:1px solid rgba(255,255,255,.06);padding:0;overflow:hidden;display:flex;align-items:stretch}
+.ticker-label{background:var(--o);padding:0 20px;display:flex;align-items:center;flex-shrink:0;z-index:2}
+.ticker-label span{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:3px;color:#fff;white-space:nowrap}
+.ticker-body{overflow:hidden;flex:1;height:38px;position:relative}
+.ticker-inner{display:flex;align-items:center;height:100%;animation:tickerMove 40s linear infinite;white-space:nowrap;gap:0}
+.ticker-inner:hover{animation-play-state:paused}
+@keyframes tickerMove{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker-item{display:inline-flex;align-items:center;gap:10px;padding:0 28px;height:100%;font-family:'Barlow Condensed',sans-serif;font-size:13px;letter-spacing:1px;color:var(--lt);border-right:1px solid rgba(255,255,255,.07);cursor:pointer;transition:color .2s;text-decoration:none;flex-shrink:0}
+.ticker-item:hover{color:var(--o)}
+.ticker-item .ti-cat{color:var(--o);font-size:11px;letter-spacing:2px;text-transform:uppercase}
+.ticker-item .ti-dot{color:var(--gb);font-size:16px;line-height:1}
+
+/* ── HABERLER (güncellenmiş) ── */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+.news-featured{grid-column:1/-1}
+.news-card{background:var(--dk2);border:1px solid rgba(255,255,255,.06);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s,transform .2s;position:relative}
+.news-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(to right,var(--o),transparent);opacity:0;transition:opacity .3s}
+.news-card:hover{border-color:rgba(255,94,0,.35);transform:translateY(-3px)}
+.news-card:hover::before{opacity:1}
+.news-featured::before{opacity:1;background:linear-gradient(to right,var(--gb),var(--o))}
+.news-media{width:100%;height:200px;overflow:hidden;position:relative;flex-shrink:0}
+.news-featured .news-media{height:260px}
+.news-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.news-card:hover .news-media img{transform:scale(1.05)}
+.news-media .vid-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3)}
+.news-media .play-btn{width:60px;height:60px;background:rgba(255,94,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff}
+.news-body-wrap{padding:20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.news-cat{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--o)}
+.news-date{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;color:var(--gy)}
+.news-title{font-family:'Barlow Condensed',sans-serif;font-size:19px;font-weight:700;color:var(--lt);line-height:1.3}
+.news-featured .news-title{font-size:24px}
+.news-body{font-family:'Barlow',sans-serif;font-size:13px;color:rgba(232,237,224,.65);line-height:1.7;flex:1}
+.news-btn{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--o);text-decoration:none;padding:8px 0;border-bottom:1px solid rgba(255,94,0,.3);transition:all .2s;width:fit-content;margin-top:4px}
+.news-btn:hover{color:var(--ol);border-color:var(--o)}
+.news-btn-passive{color:var(--gy);border-color:rgba(138,144,128,.3);cursor:default}
+/* Video modal */
+.vid-modal{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.95);align-items:center;justify-content:center}
+.vid-modal.on{display:flex}
+.vid-modal-inner{position:relative;width:90vw;max-width:960px}
+.vid-modal-inner iframe,.vid-modal-inner video{width:100%;aspect-ratio:16/9;display:block;border:none}
+.vid-modal-close{position:absolute;top:-40px;right:0;font-family:'Bebas Neue';font-size:22px;letter-spacing:2px;color:rgba(255,255,255,.7);cursor:pointer}
+.vid-modal-close:hover{color:#fff}
+
+/* ── SPONSORLAR ── */
+.sponsor-wrap{background:var(--dk2);padding:0;margin:0;max-width:100%}
+.sponsor-inner{max-width:1300px;margin:0 auto;padding:80px 48px}
+.sponsor-logos{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:center;margin-top:40px}
+.sponsor-card{background:var(--dk);border:1px solid rgba(255,255,255,.08);padding:20px 28px;display:flex;flex-direction:column;align-items:center;gap:10px;min-width:140px;max-width:180px;transition:border-color .3s,transform .2s;cursor:default}
+.sponsor-card:hover{border-color:rgba(255,94,0,.3);transform:translateY(-3px)}
+.sponsor-card img{max-width:120px;max-height:70px;object-fit:contain;filter:grayscale(40%) brightness(1.1);transition:filter .3s}
+.sponsor-card:hover img{filter:grayscale(0%) brightness(1.2)}
+.sponsor-card .sp-name{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--gy);text-align:center}
+.sponsor-card .sp-tier{font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 8px;margin-top:2px}
+.sp-gold{background:rgba(212,160,23,.15);color:var(--yw);border:1px solid rgba(212,160,23,.3)}
+.sp-silver{background:rgba(168,176,184,.12);color:var(--sv);border:1px solid rgba(168,176,184,.25)}
+.sp-bronze{background:rgba(205,127,50,.12);color:var(--bz);border:1px solid rgba(205,127,50,.25)}
+.sp-partner{background:rgba(56,176,0,.12);color:var(--gb);border:1px solid rgba(56,176,0,.25)}
+.sp-no-logo{width:100px;height:60px;background:var(--dk2);display:flex;align-items:center;justify-content:center;font-size:28px}
+.sponsor-empty{text-align:center;padding:40px;color:var(--gy);font-family:'Barlow Condensed';font-size:13px;letter-spacing:2px;text-transform:uppercase;border:2px dashed rgba(255,255,255,.08)}
+@media(max-width:768px){.news-grid{grid-template-columns:1fr}.news-featured{grid-column:1}.sponsor-logos{gap:12px}}
+/* ── KONUM PİNİ ── */
+.map-section{background:var(--dk2);padding:0}
+.map-inner{max-width:1300px;margin:0 auto;padding:80px 48px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.map-text .stag{margin-bottom:8px}
+.map-text .stitle{margin-bottom:12px}
+.map-text p{font-family:'Barlow',sans-serif;font-size:14px;color:rgba(232,237,224,.65);line-height:1.8;margin-bottom:20px}
+.map-text .map-link{display:inline-flex;align-items:center;gap:10px;background:var(--o);color:#fff;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:3px;text-transform:uppercase;padding:13px 28px;text-decoration:none;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 100%,10px 100%);transition:background .2s}
+.map-text .map-link:hover{background:var(--ol)}
+.map-pin-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--dk);border:1px solid rgba(255,255,255,.07);padding:48px 32px;position:relative;overflow:hidden;min-height:280px;cursor:pointer;text-decoration:none}
+.map-pin-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(255,94,0,.08),transparent 70%)}
+.pin-rings{position:relative;width:100px;height:100px;display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.pin-ring{position:absolute;border-radius:50%;border:2px solid var(--o);animation:pingRing 2s ease-out infinite}
+.pin-ring:nth-child(1){width:100px;height:100px;animation-delay:0s}
+.pin-ring:nth-child(2){width:100px;height:100px;animation-delay:.6s}
+.pin-ring:nth-child(3){width:100px;height:100px;animation-delay:1.2s}
+@keyframes pingRing{0%{transform:scale(.4);opacity:.8}100%{transform:scale(2.2);opacity:0}}
+.pin-ico{position:relative;z-index:2;font-size:48px;animation:pinBounce 2s ease-in-out infinite}
+@keyframes pinBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.pin-label{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lt);text-align:center;margin-bottom:4px}
+.pin-coord{font-family:'Barlow',sans-serif;font-size:11px;color:var(--gy);text-align:center}
+.pin-cta{margin-top:16px;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--o);border-bottom:1px solid rgba(255,94,0,.3);padding-bottom:2px}
+@media(max-width:768px){.map-inner{grid-template-columns:1fr}}
+
+
+.sp-call-wrap{background:var(--dk2);padding:0;margin:0;max-width:100%;position:relative;overflow:hidden}
+.sp-call-inner{max-width:1300px;margin:0 auto;padding:80px 48px}
+.sp-call-header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:32px}
+.sp-call-toggle{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:0;transition:opacity .2s}
+.sp-call-toggle:hover{opacity:.8}
+.sp-call-arrow{font-family:'Bebas Neue';font-size:28px;color:var(--o);transition:transform .4s;display:inline-block}
+.sp-call-toggle.open .sp-call-arrow{transform:rotate(180deg)}
+.sp-call-body{display:none;animation:fadeDown .4s ease}
+.sp-call-body.open{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:translateY(0)}}
+.sp-benefit{display:flex;align-items:flex-start;gap:14px;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.sp-benefit-ico{font-size:20px;width:32px;flex-shrink:0;margin-top:2px}
+.sp-benefit-title{font-family:'Barlow Condensed';font-size:14px;font-weight:700;color:var(--lt);margin-bottom:3px}
+.sp-benefit-desc{font-family:'Barlow';font-size:12px;color:rgba(232,237,224,.6);line-height:1.6}
+.sp-package{background:var(--dk);border:1px solid rgba(255,255,255,.08);padding:16px 20px;margin-bottom:10px;display:flex;align-items:center;gap:14px;transition:border-color .3s}
+.sp-package:hover{border-color:rgba(255,94,0,.35)}
+.sp-pkg-ico{font-size:22px;width:36px;text-align:center;flex-shrink:0}
+.sp-pkg-name{font-family:'Barlow Condensed';font-size:16px;font-weight:700;color:var(--lt);letter-spacing:1px}
+.sp-pkg-desc{font-family:'Barlow';font-size:12px;color:var(--gy);margin-top:2px}
+.sp-cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+/* Yanıp sönen uyarı */
+.sp-flash-bar{position:fixed;bottom:24px;right:24px;z-index:500;cursor:pointer;animation:flashPulse 2.5s ease-in-out infinite}
+@keyframes flashPulse{0%,100%{transform:scale(1);box-shadow:0 4px 20px rgba(255,94,0,.4)}50%{transform:scale(1.04);box-shadow:0 8px 40px rgba(255,94,0,.7)}}
+.sp-flash-inner{background:linear-gradient(135deg,var(--o),#cc3300);color:#fff;padding:12px 22px;display:flex;align-items:center;gap:10px;font-family:'Bebas Neue';font-size:16px;letter-spacing:2px;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 100%,10px 100%)}
+.sp-flash-dot{width:10px;height:10px;background:#fff;border-radius:50%;animation:dotBlink 1.2s ease-in-out infinite}
+@keyframes dotBlink{0%,100%{opacity:1}50%{opacity:0.2}}
+.sp-flash-close{position:absolute;top:-8px;right:-8px;width:20px;height:20px;background:var(--dk2);border:1px solid rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;cursor:pointer;color:var(--gy);transition:all .2s}
+.sp-flash-close:hover{background:var(--red);border-color:var(--red);color:#fff}
+
+/* ── SOSYAL MEDYA EMBED ── */
+.embed-wrap{background:var(--dk2);padding:0;margin:0;max-width:100%}
+.embed-inner{max-width:1300px;margin:0 auto;padding:80px 48px}
+.embed-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}
+.embed-panel{background:var(--dk);border:1px solid rgba(255,255,255,.08);overflow:hidden}
+.embed-panel-hdr{padding:16px 20px;border-bottom:1px solid rgba(255,255,255,.06);display:flex;align-items:center;gap:10px}
+.ep-ico{font-size:18px}
+.ep-title{font-family:'Barlow Condensed';font-size:14px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lt)}
+.ep-sub{font-family:'Barlow';font-size:11px;color:var(--gy);margin-left:auto}
+.embed-panel-body{padding:20px;min-height:280px;display:flex;align-items:center;justify-content:center}
+.embed-panel-body iframe{width:100%;border:none;display:block}
+.yt-embed-wrap{width:100%;aspect-ratio:16/9;background:var(--dk3);display:flex;align-items:center;justify-content:center}
+.yt-embed-wrap iframe{width:100%;height:100%;border:none}
+.ig-embed-placeholder{text-align:center;padding:32px 20px;color:var(--gy)}
+.ig-ep-ico{font-size:40px;margin-bottom:14px}
+.ig-ep-name{font-family:'Barlow Condensed';font-size:16px;font-weight:700;color:var(--lt);margin-bottom:6px}
+.ig-ep-handle{font-family:'Barlow Condensed';font-size:13px;letter-spacing:2px;color:var(--o);margin-bottom:14px}
+.ig-ep-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);color:#fff;font-family:'Barlow Condensed';font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:10px 22px;text-decoration:none;transition:opacity .2s}
+.ig-ep-btn:hover{opacity:.85}
+.ig-posts-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:16px}
+.ig-post-thumb{aspect-ratio:1;background:var(--dk3);overflow:hidden;cursor:pointer;position:relative}
+.ig-post-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.ig-post-thumb:hover img{transform:scale(1.08)}
+.ig-post-thumb .ig-overlay{position:absolute;inset:0;background:rgba(0,0,0,.4);opacity:0;display:flex;align-items:center;justify-content:center;font-size:22px;transition:opacity .3s}
+.ig-post-thumb:hover .ig-overlay{opacity:1}
+.embed-empty{text-align:center;padding:40px;color:var(--gy);width:100%}
+.embed-empty-ico{font-size:36px;margin-bottom:10px}
+.embed-empty-txt{font-family:'Barlow Condensed';font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.embed-empty-link{display:inline-block;margin-top:10px;font-family:'Barlow Condensed';font-size:11px;letter-spacing:2px;color:var(--o);text-decoration:none;text-transform:uppercase;border-bottom:1px solid rgba(255,94,0,.3)}
+.embed-empty-link:hover{border-color:var(--o)}
+
+@media(max-width:900px){.embed-grid{grid-template-columns:1fr}.sp-call-body.open{grid-template-columns:1fr}}
+@media(max-width:600px){section{padding:60px 20px}footer{padding:28px 20px;flex-direction:column;text-align:center}.h-stats{gap:20px}.ticker-label{display:none}.sp-flash-bar{bottom:12px;right:12px}}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">GREENWAY <span>ULUDAĞ</span></a>
+  <ul class="nav-links">
+    <li><a href="#hero">ANA SAYFA</a></li>
+    <li><a href="#program">PROGRAM</a></li>
+    <li><a href="#yaris">YARIŞ</a></li>
+    <li><a href="#galeri">GALERİ</a></li>
+    <li><a href="#haberler">HABERLER</a></li>
+    <li><a href="#sponsorluk" style="color:var(--o);animation:navPulse 2s infinite">🤝 SPONSOR OL</a></li>
+    <li><a href="#iletisim">İLETİŞİM</a></li>
+    <li><a href="#kayit" class="nav-cta">Kayıt Ol</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero" id="hero">
+  <!-- YouTube arka plan video -->
+  <div class="hero-yt-wrap" id="hero-yt-wrap">
+    <iframe id="hero-yt"
+      src="https://www.youtube.com/embed/c4WZn9Bgwm4?autoplay=1&mute=1&loop=1&controls=0&playlist=c4WZn9Bgwm4&rel=0&showinfo=0&modestbranding=1&iv_load_policy=3&disablekb=1&fs=0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      style="pointer-events:none">
+    </iframe>
+  </div>
+  <!-- Poster fallback -->
+  <div class="hero-img" id="hero-img-fallback"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-c">
+    <div class="eyebrow">EGE MOTOSİKLET SPOR KULÜBÜ SUNAR</div>
+    <div class="h-title"><span class="g">GREENWAY</span><br>ULUDAĞ</div>
+    <div class="h-sub">HARD ENDURO 2026</div>
+    <div class="h-date">12 — 13 — 14 HAZİRAN 2026 · ULUDAĞ / BURSA</div>
+    <div class="h-stats">
+      <div class="hstat"><div class="hstat-v">300K</div><div class="hstat-l">ÖDÜL HAVUZU ₺</div></div>
+      <div class="hdiv"></div>
+      <div class="hstat"><div class="hstat-v">55</div><div class="hstat-l">KM PARKUR</div></div>
+      <div class="hdiv"></div>
+      <div class="hstat"><div class="hstat-v">3</div><div class="hstat-l">ETAP</div></div>
+      <div class="hdiv"></div>
+      <div class="hstat"><div class="hstat-v">10K</div><div class="hstat-l">KAYIT ÜCRETİ ₺</div></div>
+    </div>
+    <div class="h-btns">
+      <a class="btn btn-p" href="#kayit">HEMEN KAYIT OL</a>
+      <a class="btn btn-s" href="#program">PROGRAMI GÖR</a>
+    </div>
+  </div>
+</div>
+
+<!-- COUNTDOWN -->
+<div class="cd-band">
+  <span class="cd-lbl">YARIŞA KALAN SÜRE</span>
+  <div class="cd-timer" id="cdt">
+    <div class="cd-unit"><div class="cd-num" id="cdg">--</div><div class="cd-ul">GÜN</div></div>
+    <div class="cd-unit"><div class="cd-num" id="cds">--</div><div class="cd-ul">SAAT</div></div>
+    <div class="cd-unit"><div class="cd-num" id="cdm">--</div><div class="cd-ul">DAKİKA</div></div>
+    <div class="cd-unit"><div class="cd-num" id="cdk">--</div><div class="cd-ul">SANİYE</div></div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-label"><span>📢 DUYURULAR &amp; HABERLER</span></div>
+  <div class="ticker-body">
+    <div class="ticker-inner" id="ticker-inner">
+      <!-- JS ile doldurulur -->
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="stag">ETKİNLİK TAKVİMİ</div>
+  <div class="stitle">ETKİNLİK <span class="a">PROGRAMI</span></div>
+  <div class="div-line"></div>
+  <div class="pg-grid">
+    <div class="pg-day">
+      <div class="pg-num">12</div>
+      <div class="pg-dt">Cuma Günü</div>
+      <div class="pg-sub">PADOK &amp; KAMP YERLEŞKESİ AÇILIŞI</div>
+      <div class="pg-row"><div class="pg-t">08:00–10:00</div><div class="pg-d">Kayıt ve Teknik Kontrol</div></div>
+      <div class="pg-row"><div class="pg-t">10:45–11:00</div><div class="pg-d">Yarış Brifingi</div></div>
+      <div class="pg-row"><div class="pg-t">11:30–12:30</div><div class="pg-d">Serbest Antrenman</div></div>
+      <div class="pg-row"><div class="pg-t">12:40–13:00</div><div class="pg-d">Parkur Kontrol ve Düzenleme</div></div>
+      <div class="pg-row"><div class="pg-t">13:15</div><div class="pg-d">Ekstrem Sıralama Yarış Startı 🏁</div></div>
+      <div class="pg-row"><div class="pg-t">17:15</div><div class="pg-d">Sıralama Sonuçları Yayınlama</div></div>
+    </div>
+    <div class="pg-day">
+      <div class="pg-num">13</div>
+      <div class="pg-dt">Cumartesi</div>
+      <div class="pg-sub">TEKNİK KONTROL · EKSTREM SIRALAMA</div>
+      <div class="pg-row"><div class="pg-t">Sabah</div><div class="pg-d">Kayıt ve Teknik Kontrol İşlemleri</div></div>
+      <div class="pg-row"><div class="pg-t">Öğle</div><div class="pg-d">Parkur Keşif Turu</div></div>
+      <div class="pg-row"><div class="pg-t">Akşam</div><div class="pg-d">Brifing ve Son Hazırlıklar</div></div>
+    </div>
+    <div class="pg-day">
+      <div class="pg-num">14</div>
+      <div class="pg-dt">Pazar</div>
+      <div class="pg-sub">HARD ENDURO YARIŞ GÜNÜ 🏆</div>
+      <div class="pg-row"><div class="pg-t">08:45–09:00</div><div class="pg-d">Hard Enduro Yarış Brifingi</div></div>
+      <div class="pg-row"><div class="pg-t">09:15</div><div class="pg-d">Hard Enduro Yarış Startı 🏁</div></div>
+      <div class="pg-row"><div class="pg-t">15:00</div><div class="pg-d">Yarış Bitişi</div></div>
+      <div class="pg-row"><div class="pg-t">15:15–17:30</div><div class="pg-d">Parkur Boşaltma ve Padok Geri Dönüş</div></div>
+      <div class="pg-row"><div class="pg-t">18:30</div><div class="pg-d">Ödül Töreni 🏆🎉</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- RACE INFO -->
+<div class="race-wrap" id="yaris">
+  <div class="race-in">
+    <div>
+      <div class="stag">PARKUR BİLGİSİ</div>
+      <div class="stitle">ETAPLAR &amp;<br><span class="a">KAPILAR</span></div>
+      <div class="div-line"></div>
+      <p style="font-size:14px;color:rgba(232,237,224,.6);line-height:1.7;margin-bottom:4px">Greenway Uludağ Hard Enduro üç zorlu etaptan oluşmaktadır. Yarışçılar sırasıyla Bronz ve Gümüş kapılarını geçerek Altın bitiş kapısına ulaşmaya çalışacaktır. Toplam 55 km'lik parkur teknik beceri ve dayanıklılık gerektiren ekstrem bölümler içermektedir.</p>
+      <div class="etap-list">
+        <div class="etap-item e-bz">
+          <div class="etap-ico e-bz">🥉</div>
+          <div><div class="etap-nm e-bz">Bronz Kapısı</div><div class="etap-s">1. Etap · Birinci Kontrol Noktası</div></div>
+        </div>
+        <div class="etap-item e-sv">
+          <div class="etap-ico e-sv">🥈</div>
+          <div><div class="etap-nm e-sv">Gümüş Kapısı</div><div class="etap-s">2. Etap · İkinci Kontrol Noktası</div></div>
+        </div>
+        <div class="etap-item e-gd">
+          <div class="etap-ico e-gd">🏁</div>
+          <div><div class="etap-nm e-gd">Altın Kapısı — FİNİŞ</div><div class="etap-s">3. Etap · Şampiyonluk Bitiş Noktası</div></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="stag">PARA ÖDÜLLERİ</div>
+      <div class="stitle">BÜYÜK<br><span class="a">ÖDÜLLER</span></div>
+      <div class="div-line"></div>
+      <div class="prize-cards">
+        <div class="pcard p1">
+          <div class="prank">1.</div>
+          <div><div class="pamt">35.000 ₺</div><div class="pdet">Kupa + Altın Madalya</div></div>
+        </div>
+        <div class="pcard p2">
+          <div class="prank">2.</div>
+          <div><div class="pamt">25.000 ₺</div><div class="pdet">Kupa + Gümüş Madalya</div></div>
+        </div>
+        <div class="pcard p3">
+          <div class="prank">3.</div>
+          <div><div class="pamt">15.000 ₺</div><div class="pdet">Kupa + Bronz Madalya</div></div>
+        </div>
+      </div>
+      <div class="ptot">Toplam Ödül Havuzu<strong>300.000 ₺</strong></div>
+      <div style="margin-top:20px;padding:14px 20px;background:rgba(255,94,0,.08);border-left:3px solid var(--o)">
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gy);margin-bottom:6px">Katılım Şartları</div>
+        <div style="font-size:13px;color:rgba(232,237,224,.7);line-height:1.7">Lisans, Sigorta ve <strong style="color:var(--o)">10.000 ₺</strong> yarış kayıt ücretidir. Lisansı olmayan katılımcılar ücretsiz lisans ve sigorta için <strong style="color:var(--gb)">0 (531) 085 43 90</strong> numaralı hattı arayabilir.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section id="galeri">
+  <div class="stag">FOTOĞRAF GALERİSİ</div>
+  <div class="stitle">ANLAR &amp; <span class="a">AKSİYON</span></div>
+  <div class="div-line"></div>
+  <div class="gallery-grid" id="gallery">
+    <div class="gitem" data-idx="0"><img src="19.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="1"><img src="20.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="2"><img src="21.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="3"><img src="22.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="4"><img src="and.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="5"><img src="18.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="6"><img src="5.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="7"><img src="6.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="8"><img src="11.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="9"><img src="12.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="10"><img src="15.webp" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="11"><img src="16.jpeg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="12"><img src="17.jpeg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="13"><img src="3.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="14"><img src="4.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="15"><img src="7.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="16"><img src="1.jpg" alt="Enduro" loading="eager"></div>
+    <div class="gitem" data-idx="17"><img src="2.jpg" alt="Enduro" loading="eager"></div>
+  </div>
+</section>
+
+<!-- REGISTRATION FORM -->
+<div class="form-wrap" id="kayit">
+  <div class="form-in">
+    <div>
+      <div class="stag">KATILIM BİLGİLERİ</div>
+      <div class="stitle">KAYIT &amp;<br><span class="a">ÖDEME</span></div>
+      <div class="div-line"></div>
+      <div class="info-block">
+        <div class="info-lbl">KAYIT ÜCRETİ</div>
+        <div class="info-val" style="font-family:'Bebas Neue';font-size:34px;color:#fff">10.000 ₺</div>
+      </div>
+      <div class="info-block">
+        <div class="info-lbl">BANKA HAVALESİ</div>
+        <div class="info-val">Alıcı Adı: EGE MOTOSİKLET SPOR KULÜBÜ</div>
+        <div class="iban-box">TR92 0006 2000 5040 0006 2975 68</div>
+      </div>
+      <div class="info-block">
+        <div class="info-lbl">SİGORTA</div>
+        <div class="info-val">UNION Sigorta<br><span style="color:var(--gb)">0 (531) 085 43 90</span></div>
+      </div>
+      <div class="info-block">
+        <div class="info-lbl">KONAKLAMA</div>
+        <div class="info-val">Otel Leoncity<br><span style="color:var(--gb)">0 (224) 253 75 75</span></div>
+      </div>
+      <div class="info-block">
+        <div class="info-lbl">LİSANS BİLGİSİ</div>
+        <div class="info-val" style="font-size:13px;color:rgba(232,237,224,.65);line-height:1.7">Lisansı olmayan katılımcılar ücretsiz lisans ve sigorta işlemleri için teknik heyetimizle iletişime geçebilir.<br><strong style="color:var(--o)">0 (531) 085 43 90</strong></div>
+      </div>
+      <div class="info-block">
+        <div class="info-lbl">PARKUR KONUMU</div>
+        <div class="info-val"><a href="https://maps.app.goo.gl/ST1WZgWh7fGZzveX6?g_st=ipc" target="_blank" style="color:var(--gb);text-decoration:none">Uludağ Padok ve Kamp<br>Yerleşkesi, Bursa →</a></div>
+      </div>
+    </div>
+    <div>
+      <div class="stag">ONLİNE BAŞVURU</div>
+      <div class="stitle">HEMEN <span class="a">BAŞVUR</span></div>
+      <div class="div-line"></div>
+      <form id="reg-form" name="kayit-formu" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="submitForm(event)">
+        <input type="hidden" name="form-name" value="kayit-formu">
+        <input type="hidden" name="bot-field" style="display:none">
+        <div class="form-grid">
+          <div class="ff"><label>Adı *</label><input type="text" name="ad" placeholder="Adınız" required></div>
+          <div class="ff"><label>Soyadı *</label><input type="text" name="soyad" placeholder="Soyadınız" required></div>
+          <div class="ff"><label>TC Kimlik No *</label><input type="text" name="tc" placeholder="11 haneli TC No" maxlength="11" pattern="[0-9]{11}" required></div>
+          <div class="ff"><label>Telefon No *</label><input type="tel" name="tel" placeholder="05XX XXX XX XX" required></div>
+          <div class="ff"><label>E-posta *</label><input type="email" name="email" placeholder="ornek@mail.com" required></div>
+          <div class="ff"><label>Lisans No *</label><input type="text" name="lisans" placeholder="Lisans numaranız" required></div>
+          <div class="ff full"><label>Hangi İlden Katılıyorsunuz? *</label>
+            <select name="il" required>
+              <option value="">İl Seçin</option>
+              <option>1 - ADANA</option><option>2 - ADIYAMAN</option><option>3 - AFYONKARAHİSAR</option>
+              <option>4 - AĞRI</option><option>5 - AMASYA</option><option>6 - ANKARA</option>
+              <option>7 - ANTALYA</option><option>8 - ARTVİN</option><option>9 - AYDIN</option>
+              <option>10 - BALIKESİR</option><option>11 - BİLECİK</option><option>12 - BİNGÖL</option>
+              <option>13 - BİTLİS</option><option>14 - BOLU</option><option>15 - BURDUR</option>
+              <option>16 - BURSA</option><option>17 - ÇANAKKALE</option><option>18 - ÇANKIRI</option>
+              <option>19 - ÇORUM</option><option>20 - DENİZLİ</option><option>21 - DİYARBAKIR</option>
+              <option>22 - EDİRNE</option><option>23 - ELAZIĞ</option><option>24 - ERZİNCAN</option>
+              <option>25 - ERZURUM</option><option>26 - ESKİŞEHİR</option><option>27 - GAZİANTEP</option>
+              <option>28 - GİRESUN</option><option>29 - GÜMÜŞHANE</option><option>30 - HAKKARİ</option>
+              <option>31 - HATAY</option><option>32 - ISPARTA</option><option>33 - MERSİN(İÇEL)</option>
+              <option>34 - İSTANBUL</option><option>35 - İZMİR</option><option>36 - KARS</option>
+              <option>37 - KASTAMONU</option><option>38 - KAYSERİ</option><option>39 - KIRKLARELİ</option>
+              <option>40 - KIRŞEHİR</option><option>41 - KOCAELİ</option><option>42 - KONYA</option>
+              <option>43 - KÜTAHYA</option><option>44 - MALATYA</option><option>45 - MANİSA</option>
+              <option>46 - KAHRAMANMARAŞ</option><option>47 - MARDİN</option><option>48 - MUĞLA</option>
+              <option>49 - MUŞ</option><option>50 - NEVŞEHİR</option><option>51 - NİĞDE</option>
+              <option>52 - ORDU</option><option>53 - RİZE</option><option>54 - SAKARYA</option>
+              <option>55 - SAMSUN</option><option>56 - SİİRT</option><option>57 - SİNOP</option>
+              <option>58 - SİVAS</option><option>59 - TEKİRDAĞ</option><option>60 - TOKAT</option>
+              <option>61 - TRABZON</option><option>62 - TUNCELİ</option><option>63 - ŞANLIURFA</option>
+              <option>64 - UŞAK</option><option>65 - VAN</option><option>66 - YOZGAT</option>
+              <option>67 - ZONGULDAK</option><option>68 - AKSARAY</option><option>69 - BAYBURT</option>
+              <option>70 - KARAMAN</option><option>71 - KIRIKKALE</option><option>72 - BATMAN</option>
+              <option>73 - ŞIRNAK</option><option>74 - BARTIN</option><option>75 - ARDAHAN</option>
+              <option>76 - IĞDIR</option><option>77 - YALOVA</option><option>78 - KARABÜK</option>
+              <option>79 - KİLİS</option><option>80 - OSMANİYE</option><option>81 - DÜZCE</option>
+            </select>
+          </div>
+          <div class="ff"><label>Motor Markası *</label><input type="text" name="marka" placeholder="KTM, Husqvarna, Beta..." required></div>
+          <div class="ff"><label>Motor Hacmi *</label>
+            <select name="hacim" required>
+              <option value="">Seçin</option>
+              <option>125</option><option>250</option><option>450</option>
+            </select>
+          </div>
+          <div class="ff full"><label>Motor Zamanı *</label>
+            <div class="radio-group" style="margin-top:8px">
+              <label class="radio-opt"><input type="radio" name="zaman" value="iki_zamanli" required> İki Zamanlı</label>
+              <label class="radio-opt"><input type="radio" name="zaman" value="dort_zamanli"> Dört Zamanlı</label>
+            </div>
+          </div>
+          <div class="ff full">
+            <div class="file-zone">
+              <label>Dekont * (Max 8 MB)</label>
+              <label class="file-btn"><input type="file" name="dekont" accept=".jpg,.jpeg,.png,.pdf" onchange="showFile(this,'dekont-name')"> 📎 Dosya Seç</label>
+              <span class="file-name" id="dekont-name">Dosya seçilmedi</span>
+            </div>
+          </div>
+          <div class="ff full">
+            <div class="file-zone">
+              <label>Lisans * (Max 8 MB)</label>
+              <label class="file-btn"><input type="file" name="lisans_doc" accept=".jpg,.jpeg,.png,.pdf" onchange="showFile(this,'lisans-name')"> 📎 Dosya Seç</label>
+              <span class="file-name" id="lisans-name">Dosya seçilmedi</span>
+            </div>
+          </div>
+          <div class="ff full"><label>Açıklamalar</label><textarea name="aciklama" placeholder="Varsa eklemek istediğiniz notlar..."></textarea></div>
+          <div class="submit-btn"><button type="submit">KAYDI TAMAMLA →</button></div>
+          <div class="success-msg" id="success-msg">✅ Kayıt formunuz başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.</div>
+          <div class="form-note">* işaretli alanlar zorunludur. Sorularınız için: <strong style="color:var(--o)">0 (531) 085 43 90</strong> · <strong style="color:var(--gb)">greenwayuludag2026@gmail.com</strong></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- HABERLER -->
+<section id="haberler">
+  <div class="stag">SON GELİŞMELER</div>
+  <div class="stitle">HABERLER &amp; <span class="a">DUYURULAR</span></div>
+  <div class="div-line"></div>
+  <div class="news-grid" id="news-grid"><!-- JS ile yüklenir --></div>
+  <div style="text-align:center;margin-top:32px">
+    <a href="admin.html" class="btn btn-s" style="font-size:12px;padding:9px 22px;text-decoration:none">⚙️ Haber &amp; Sponsor Yönetimi</a>
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="vid-modal" id="vid-modal" onclick="closeVid(event)">
+  <div class="vid-modal-inner" id="vid-modal-inner">
+    <div class="vid-modal-close" onclick="closeVidBtn()">✕ KAPAT</div>
+  </div>
+</div>
+
+<!-- SPONSORLAR -->
+<div class="sponsor-wrap" id="sponsorlar">
+  <div class="sponsor-inner">
+    <div class="stag">İŞ ORTAKLARI</div>
+    <div class="stitle">SPONSORLAR &amp; <span class="a" style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(40px,5.5vw,72px)">DESTEKÇİLER</span></div>
+    <div class="div-line"></div>
+    <div class="sponsor-logos" id="sponsor-logos"><!-- JS ile yüklenir --></div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section id="iletisim">
+  <div class="stag">BİZE ULAŞIN</div>
+  <div class="stitle">İLETİŞİM &amp; <span class="a">LOJİSTİK</span></div>
+  <div class="div-line"></div>
+  <div class="c-grid">
+    <div class="ccard"><div class="ccard-ico">📞</div><div class="ccard-t">ETKİNLİK &amp; KAYIT HATTI</div><div class="ccard-v"><a href="tel:05310854390">0 (531) 085 43 90</a></div></div>
+    <div class="ccard"><div class="ccard-ico">✉️</div><div class="ccard-t">KAYIT E-POSTASI</div><div class="ccard-v"><a href="mailto:greenwayuludag2026@gmail.com">greenwayuludag2026@gmail.com</a></div></div>
+    <div class="ccard"><div class="ccard-ico">✉️</div><div class="ccard-t">YÖNETİM E-POSTASI</div><div class="ccard-v"><a href="mailto:feryay@gmail.com">feryay@gmail.com</a></div></div>
+    <div class="ccard"><div class="ccard-ico">🏨</div><div class="ccard-t">KONAKLAMA</div><div class="ccard-v">Otel Leoncity<br>0 (224) 253 75 75</div></div>
+    <div class="ccard"><div class="ccard-ico">📍</div><div class="ccard-t">PARKUR KONUMU</div><div class="ccard-v"><a href="https://maps.app.goo.gl/ST1WZgWh7fGZzveX6?g_st=ipc" target="_blank">Uludağ Padok ve Kamp<br>Yerleşkesi, Bursa →</a></div></div>
+    <div class="ccard"><div class="ccard-ico">🛡️</div><div class="ccard-t">SİGORTA</div><div class="ccard-v">UNION Sigorta<br>0 (531) 085 43 90</div></div>
+    <div class="ccard"><div class="ccard-ico">🌐</div><div class="ccard-t">WEB SİTESİ</div><div class="ccard-v"><a href="https://greenwayuludag.com" target="_blank">greenwayuludag.com →</a></div></div>
+    <div class="ccard"><div class="ccard-ico">🤝</div><div class="ccard-t">SPONSORLUK</div><div class="ccard-v"><a href="mailto:greenwayuludag2026@gmail.com?subject=Sponsorluk%20Başvurusu">Teklif için yaz →</a></div></div>
+  </div>
+</section>
+
+<!-- KONUM & HARİTA -->
+<div class="map-section">
+  <div class="map-inner">
+    <div class="map-text">
+      <div class="stag">PARKUR KONUMU</div>
+      <div class="stitle">ULUDAĞ <span class="a">PADOK</span></div>
+      <div class="div-line" style="margin-bottom:20px"></div>
+      <p>Greenway Uludağ Hard Enduro 2026, Uludağ Padok ve Kamp Yerleşkesi'nde gerçekleşecektir. Yarış alanı Bursa'nın eşsiz doğası içinde, Uludağ eteklerinde konumlanmaktadır.</p>
+      <p><strong style="color:var(--lt)">📍 Adres:</strong> Uludağ Padok ve Kamp Yerleşkesi, Bursa<br>
+      <strong style="color:var(--lt)">📅 Tarih:</strong> 12 – 13 – 14 Haziran 2026</p>
+      <a href="https://maps.app.goo.gl/ST1WZgWh7fGZzveX6?g_st=ipc" target="_blank" class="map-link">
+        🗺️ Haritada Göster
+      </a>
+    </div>
+    <a href="https://maps.app.goo.gl/ST1WZgWh7fGZzveX6?g_st=ipc" target="_blank" class="map-pin-wrap">
+      <div class="pin-rings">
+        <div class="pin-ring"></div>
+        <div class="pin-ring"></div>
+        <div class="pin-ring"></div>
+        <div class="pin-ico">📍</div>
+      </div>
+      <div class="pin-label">Uludağ Padok Yerleşkesi</div>
+      <div class="pin-coord">Bursa, Türkiye · 12–14 Haziran 2026</div>
+      <div class="pin-cta">Yol Tarifi Al →</div>
+    </a>
+  </div>
+</div>
+
+<!-- SPONSORLUK ÇAĞRISI -->
+<div class="sp-call-wrap" id="sponsorluk">
+  <div class="sp-call-inner">
+    <div class="sp-call-header">
+      <div>
+        <div class="stag">İŞ BİRLİĞİ FIRSATI</div>
+        <div class="stitle">SPONSORLUK <span class="a">ÇAĞRISI</span></div>
+        <div class="div-line" style="margin-bottom:0"></div>
+        <div style="font-family:'Barlow';font-size:14px;color:rgba(232,237,224,.65);line-height:1.7;max-width:600px;margin-top:12px">
+          Greenway Uludağ Hard Enduro 2026 için geri sayım başladı. Markanızı doğrudan adrenalin, performans ve dayanıklılıkla eşleştirme fırsatı sunuyoruz.
+        </div>
+      </div>
+      <button class="sp-call-toggle" onclick="toggleSpCall(this)" id="sp-toggle-btn">
+        <span style="font-family:'Barlow Condensed';font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--o)">DETAYLARI GÖR</span>
+        <span class="sp-call-arrow">▾</span>
+      </button>
+    </div>
+
+    <div class="sp-call-body" id="sp-call-body">
+      <!-- Sol: Faydalar -->
+      <div>
+        <div style="font-family:'Barlow Condensed';font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--o);margin-bottom:16px">🎯 Neden Sponsor Olmalısınız?</div>
+        <div class="sp-benefit">
+          <div class="sp-benefit-ico">🏍️</div>
+          <div><div class="sp-benefit-title">Hedefli Kitle</div><div class="sp-benefit-desc">Off-road, motosiklet ve ekstrem spor tutkunları — en yüksek satın alma eğilimli segment</div></div>
+        </div>
+        <div class="sp-benefit">
+          <div class="sp-benefit-ico">📱</div>
+          <div><div class="sp-benefit-title">Yüksek Etkileşim</div><div class="sp-benefit-desc">Sosyal medya + sahada birebir temas. Viral içerik üretimi garantili</div></div>
+        </div>
+        <div class="sp-benefit">
+          <div class="sp-benefit-ico">💪</div>
+          <div><div class="sp-benefit-title">Güçlü Marka Konumlandırma</div><div class="sp-benefit-desc">Dayanıklılık, güç ve performans algısıyla marka ilişkilendirmesi</div></div>
+        </div>
+        <div class="sp-benefit">
+          <div class="sp-benefit-ico">🎬</div>
+          <div><div class="sp-benefit-title">Organik İçerik Üretimi</div><div class="sp-benefit-desc">Yarış anları, viral görüntüler, influencer katılımı — kalıcı marka yerleşimi</div></div>
+        </div>
+        <div class="sp-benefit">
+          <div class="sp-benefit-ico">📊</div>
+          <div><div class="sp-benefit-title">Size Ne Sunuyoruz?</div><div class="sp-benefit-desc">Parkurda yüksek görünürlük · Dijital mecralarda marka entegrasyonu · VIP &amp; networking · Video/fotoğraf içeriklerinde kalıcı yer</div></div>
+        </div>
+
+        <div style="margin-top:24px;padding:18px;background:rgba(255,94,0,.06);border-left:3px solid var(--o)">
+          <div style="font-family:'Barlow Condensed';font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--o);margin-bottom:6px">⚠️ Sınırlı Kontenjan</div>
+          <div style="font-family:'Barlow';font-size:13px;color:rgba(232,237,224,.7);line-height:1.6">Sınırlı sayıda sponsor kabul edilmektedir. Erken başvuru avantajından yararlanın. Her paket markanızın hedeflerine göre özelleştirilebilir.</div>
+        </div>
+      </div>
+
+      <!-- Sağ: Paketler + CTA -->
+      <div>
+        <div style="font-family:'Barlow Condensed';font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--o);margin-bottom:16px">🚀 Sponsorluk Paketleri</div>
+
+        <div class="sp-package">
+          <div class="sp-pkg-ico">🥇</div>
+          <div><div class="sp-pkg-name">Ana Sponsor (Title Sponsor)</div><div class="sp-pkg-desc">En üst görünürlük · Tüm materyallerde isim hakkı · VIP alan</div></div>
+        </div>
+        <div class="sp-package">
+          <div class="sp-pkg-ico">🥈</div>
+          <div><div class="sp-pkg-name">Resmi Sponsor</div><div class="sp-pkg-desc">Parkur ve dijital mecralarda güçlü marka yerleşimi</div></div>
+        </div>
+        <div class="sp-package">
+          <div class="sp-pkg-ico">🥉</div>
+          <div><div class="sp-pkg-name">Destek Sponsoru</div><div class="sp-pkg-desc">Dijital içeriklerde logo · Sosyal medya paylaşımları</div></div>
+        </div>
+        <div class="sp-package">
+          <div class="sp-pkg-ico">🔧</div>
+          <div><div class="sp-pkg-name">Ürün / Teknik İş Birliği</div><div class="sp-pkg-desc">Ürün/hizmet karşılığı iş birliği · Özel içerik üretimi</div></div>
+        </div>
+
+        <div style="margin-top:20px;padding:18px;background:var(--dk);border:1px solid rgba(255,255,255,.08)">
+          <div style="font-family:'Barlow Condensed';font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gb);margin-bottom:8px">📍 Nerede &amp; Ne Zaman?</div>
+          <div style="font-family:'Barlow';font-size:13px;color:rgba(232,237,224,.7)">Uludağ Padok ve Kamp Yerleşkesi, Bursa<br>12 – 13 – 14 Haziran 2026</div>
+        </div>
+
+        <div class="sp-cta-row">
+          <a href="mailto:greenwayuludag2026@gmail.com?subject=Sponsorluk%20Ba%C5%9Fvurusu" class="btn btn-p">📩 Sponsorluk Teklifi Al</a>
+          <a href="tel:05310854390" class="btn btn-s">📞 Hemen Ara</a>
+        </div>
+        <div style="font-family:'Barlow';font-size:11px;color:var(--gy);margin-top:10px">veya: <strong style="color:var(--lt)">info@greenwayuludag.com</strong></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SOSYAL MEDYA EMBED -->
+<div class="embed-wrap" id="sosyal-medya">
+  <div class="embed-inner">
+    <div class="stag">BİZİ TAKİP EDİN</div>
+    <div class="stitle">SOSYAL <span class="a">MEDYA</span></div>
+    <div class="div-line"></div>
+    <div class="embed-grid" id="embed-grid"><!-- JS ile doldurulur --></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-brand">GREENWAY <span>ULUDAĞ</span></div>
+  <div class="foot-copy">© 2026 EGE Motosiklet Spor Kulübü &nbsp;·&nbsp; info@greenwayuludag.com &nbsp;·&nbsp; Uludağ / Bursa</div>
+  <div class="foot-social" id="foot-social"><!-- JS ile doldurulur --></div>
+  <div style="width:100%;border-top:1px solid rgba(255,255,255,.06);margin-top:24px;padding-top:20px;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap">
+    <span style="font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gy)">ORGANİZATÖR &amp; İŞ ORTAĞI</span>
+
+    <!-- TMF -->
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="height:36px;background:#fff;border-radius:4px;padding:4px 10px;display:flex;align-items:center;justify-content:center">
+        <img src="TMF.jpg" alt="TMF" style="height:28px;width:auto;display:block;object-fit:contain">
+      </div>
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--lt);line-height:1.2">TÜRKİYE MOTOSİKLET</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--lt);line-height:1.2">FEDERASYONU</div>
+      </div>
+    </div>
+
+    <div style="width:1px;height:36px;background:rgba(255,255,255,.1)"></div>
+
+    <!-- EMK -->
+    <div style="display:flex;align-items:center;gap:10px">
+      <div style="width:40px;height:40px;border-radius:50%;overflow:hidden;border:1.5px solid rgba(255,255,255,.15);flex-shrink:0;background:var(--dk2)">
+        <img src="EMK.jpg" alt="EMK" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--lt);line-height:1.2">EGE MOTOSİKLET</div>
+        <div style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:1px;color:var(--lt);line-height:1.2">SPOR KULÜBÜ</div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- SPONSORLUK YANIP SÖNEN BUTON -->
+<div class="sp-flash-bar" id="sp-flash-bar" onclick="scrollToSponsorluk()">
+  <div class="sp-flash-inner">
+    <span class="sp-flash-dot"></span>
+    SPONSOR OL — SINIRLI KONTENJAN!
+  </div>
+  <div class="sp-flash-close" onclick="event.stopPropagation();hideFlash()" title="Kapat">✕</div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLB(event)">
+  <div class="lb-x" onclick="closeLB()">✕ KAPAT</div>
+  <span class="lb-nav lb-prev" onclick="lbNav(-1,event)">‹</span>
+  <img id="lb-img" src="" alt="">
+  <span class="lb-nav lb-next" onclick="lbNav(1,event)">›</span>
+</div>
+
+<script>
+// ── SHARED KEYS & DATA
+const NEWS_KEY    = "greenway_news";
+const SPONSOR_KEY = "greenway_sponsors";
+const SOCIAL_KEY  = "greenway_social";
+const EMBED_KEY   = "greenway_embeds";
+const MONTHS = ['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'];
+function fmtDate(d){ if(!d) return ''; const dt=new Date(d); return `${dt.getDate()} ${MONTHS[dt.getMonth()]} ${dt.getFullYear()}`; }
+
+const DEFAULT_SOCIAL = [
+  {id:1,platform:"instagram",url:"https://www.instagram.com/ege_motosiklet_kulubu/",label:"@ege_motosiklet_kulubu"},
+  {id:2,platform:"facebook",url:"https://facebook.com",label:"Facebook"},
+  {id:3,platform:"youtube",url:"https://youtube.com",label:"YouTube"},
+  {id:4,platform:"tiktok",url:"https://tiktok.com",label:"TikTok"},
+  {id:5,platform:"x",url:"https://x.com",label:"X / Twitter"},
+];
+
+const DEFAULT_EMBEDS = {
+  youtube_url: "https://youtu.be/c4WZn9Bgwm4?si=JoiC3ee8YAE9OB00",
+  youtube_title: "Greenway Uludağ Hard Enduro",
+  youtube_channel_url: "https://youtu.be/c4WZn9Bgwm4",
+  instagram_url: "https://www.instagram.com/ege_motosiklet_kulubu/",
+  instagram_handle: "@ege_motosiklet_kulubu",
+};
+
+const DEFAULT_NEWS = [
+  {id:1,cat:"📢 Resmi Duyuru",date:"2026-04-30",featured:"1",title:"Greenway Uludağ Hard Enduro 2026 Kayıtları Açıldı!",body:"EGE Motosiklet Spor Kulübü olarak Greenway Uludağ Hard Enduro 2026 için kayıtların açıldığını duyuruyoruz. 12–14 Haziran 2026 tarihleri arasında Uludağ Padok ve Kamp Yerleşkesi'nde gerçekleşecek yarışa katılım ücreti 10.000 ₺'dir. Kontenjan sınırlıdır.",btnText:"Kayıt Ol →",btnUrl:"#kayit",mediaType:"",mediaSrc:""},
+  {id:6,cat:"🤝 İş Birliği",date:"2026-04-30",featured:"0",title:"Türkiye Motosiklet Federasyonu Resmi İş Ortağımız Oldu!",body:"Greenway Uludağ Hard Enduro 2026, Türkiye Motosiklet Federasyonu (TMF) resmi iş birliğiyle gerçekleştirilecektir. TMF ile yürütülen bu iş birliği, etkinliğimizin ulusal düzeyde tanınırlığını ve güvenilirliğini daha da güçlendirmektedir.",btnText:"Detaylar →",btnUrl:"#sponsorluk",mediaType:"img",mediaSrc:"TMF.jpg"},
+  {id:2,cat:"🏆 Yarış",date:"2026-04-28",featured:"0",title:"300.000 ₺ Ödül Havuzu Açıklandı",body:"Bu yılki yarışta toplam 300.000 ₺ ödül havuzu oluşturuldu. 1.lik 35.000 ₺, 2.lik 25.000 ₺, 3.lük 15.000 ₺.",btnText:"Ödülleri Gör →",btnUrl:"#yaris",mediaType:"",mediaSrc:""},
+  {id:3,cat:"📍 Parkur",date:"2026-04-25",featured:"0",title:"55 Km'lik Parkur Güzergahı Belirlendi",body:"Teknik heyet tarafından 55 km olarak tasarlanan parkur; Bronz, Gümüş ve Altın kapılardan oluşan üç etap içermektedir.",btnText:"Program →",btnUrl:"#program",mediaType:"",mediaSrc:""},
+  {id:4,cat:"🩸 Sosyal Sorumluluk",date:"2026-04-22",featured:"0",title:"14 Haziran Kızılay Kan Bağışı Kampanyası",body:"Yarış finalimiz olan 14 Haziran, Dünya Kan Bağışçıları Günü'dür. Kızılay iş birliğiyle parkurda kan bağışı noktası planlanmaktadır.",btnText:"",btnUrl:"",mediaType:"",mediaSrc:""},
+  {id:5,cat:"🏨 Lojistik",date:"2026-04-20",featured:"0",title:"Konaklama: Otel Leoncity Anlaşması",body:"Yarışmacılar için Otel Leoncity ile özel fiyat anlaşması yapıldı. Rezervasyon için 'Greenway Uludağ' yarışçısı olduğunuzu belirtmeniz yeterlidir.",btnText:"0 (224) 253 75 75",btnUrl:"tel:02242537575",mediaType:"",mediaSrc:""},
+];
+
+const DEFAULT_SPONSORS = [
+  {id:1,name:"EGE Motosiklet",tier:"partner",logotype:"emoji",logo:"🏍️"},
+  {id:2,name:"UNION Sigorta",tier:"gold",logotype:"emoji",logo:"🛡️"},
+  {id:3,name:"Otel Leoncity",tier:"silver",logotype:"emoji",logo:"🏨"},
+  {id:4,name:"Bursa BBB",tier:"partner",logotype:"emoji",logo:"🏛️"},
+  {id:5,name:"TMF",tier:"partner",logotype:"emoji",logo:"🏁"},
+];
+
+function getNews(){ const s=localStorage.getItem(NEWS_KEY); return s?JSON.parse(s):DEFAULT_NEWS; }
+function getSponsors(){ const s=localStorage.getItem(SPONSOR_KEY); return s?JSON.parse(s):DEFAULT_SPONSORS; }
+function getSocial(){ const s=localStorage.getItem(SOCIAL_KEY); return s?JSON.parse(s):DEFAULT_SOCIAL; }
+function getEmbeds(){ const s=localStorage.getItem(EMBED_KEY); return s?JSON.parse(s):DEFAULT_EMBEDS; }
+if(!localStorage.getItem(NEWS_KEY)) localStorage.setItem(NEWS_KEY,JSON.stringify(DEFAULT_NEWS));
+if(!localStorage.getItem(SPONSOR_KEY)) localStorage.setItem(SPONSOR_KEY,JSON.stringify(DEFAULT_SPONSORS));
+if(!localStorage.getItem(SOCIAL_KEY)) localStorage.setItem(SOCIAL_KEY,JSON.stringify(DEFAULT_SOCIAL));
+// Embed: YouTube URL güncellendiyse yeni varsayılanı yükle
+const _emb = localStorage.getItem(EMBED_KEY);
+if(!_emb || JSON.parse(_emb).youtube_url==='') {
+  localStorage.setItem(EMBED_KEY,JSON.stringify(DEFAULT_EMBEDS));
+}
+
+const SM_ICONS={instagram:'📸',facebook:'📘',youtube:'▶️',tiktok:'🎵',x:'✖',twitter:'🐦',linkedin:'💼',whatsapp:'💬',telegram:'✈️'};
+const SM_LABELS={instagram:'ig',facebook:'f',youtube:'▶',tiktok:'tt',x:'x',twitter:'tw',linkedin:'in',whatsapp:'wa',telegram:'tg'};
+
+// ── RENDER SOCIAL FOOTER
+function renderSocialFooter(){
+  const all=getSocial();
+  const fs=document.getElementById('foot-social');
+  if(!fs) return;
+  fs.innerHTML=all.map(s=>`<a href="${s.url}" target="_blank" rel="noopener" title="${s.label}">${SM_LABELS[s.platform]||s.platform.substring(0,2)}</a>`).join('');
+}
+
+// ── RENDER EMBEDS
+function getYTEmbedId(url){
+  if(!url) return '';
+  const m1=url.match(/youtube\.com\/watch\?v=([^&]+)/);
+  const m2=url.match(/youtu\.be\/([^?]+)/);
+  const m3=url.match(/youtube\.com\/embed\/([^?]+)/);
+  return (m1&&m1[1])||(m2&&m2[1])||(m3&&m3[1])||'';
+}
+
+function renderEmbeds(){
+  const cfg=getEmbeds();
+  const grid=document.getElementById('embed-grid');
+  if(!grid) return;
+
+  // YouTube panel
+  let ytHtml='';
+  const ytId = getYTEmbedId(cfg.youtube_url||'');
+  if(ytId){
+    ytHtml=`<div class="yt-embed-wrap">
+      <iframe src="https://www.youtube.com/embed/${ytId}" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen loading="eager"></iframe>
+    </div>`;
+  } else if(cfg.youtube_channel_url){
+    ytHtml=`<div class="embed-empty">
+      <div class="embed-empty-ico">▶️</div>
+      <div class="embed-empty-txt">YouTube Kanalı</div>
+      <a href="${cfg.youtube_channel_url}" target="_blank" rel="noopener" class="ig-ep-btn" style="margin-top:12px;background:#ff0000">▶️ Kanalı İzle</a>
+    </div>`;
+  } else {
+    ytHtml=`<div class="embed-empty">
+      <div class="embed-empty-ico">▶️</div>
+      <div class="embed-empty-txt">YouTube videosu bekleniyor</div>
+      <a href="admin.html" class="embed-empty-link">Admin'den video ekle →</a>
+    </div>`;
+  }
+
+  // Instagram panel
+  const igUrl = cfg.instagram_url||'https://www.instagram.com/ege_motosiklet_kulubu/';
+  const igHandle = cfg.instagram_handle||'@ege_motosiklet_kulubu';
+  const igHtml=`<div class="ig-embed-placeholder">
+    <div class="ig-ep-ico">📸</div>
+    <div class="ig-ep-name">EGE Motosiklet Spor Kulübü</div>
+    <div class="ig-ep-handle">${igHandle}</div>
+    <a href="${igUrl}" target="_blank" rel="noopener" class="ig-ep-btn">📸 Instagram'da Takip Et</a>
+    <div style="font-family:'Barlow';font-size:11px;color:var(--gy);margin-top:12px;line-height:1.6">
+      Yarış anları, parkur bilgileri<br>ve güncel haberler için takip edin
+    </div>
+  </div>`;
+
+  grid.innerHTML=`
+    <div class="embed-panel">
+      <div class="embed-panel-hdr">
+        <span class="ep-ico">▶️</span>
+        <span class="ep-title">YouTube</span>
+        <span class="ep-sub">${cfg.youtube_title||'Son Video'}</span>
+      </div>
+      <div class="embed-panel-body">${ytHtml}</div>
+    </div>
+    <div class="embed-panel">
+      <div class="embed-panel-hdr">
+        <span class="ep-ico">📸</span>
+        <span class="ep-title">Instagram</span>
+        <span class="ep-sub">${igHandle}</span>
+      </div>
+      <div class="embed-panel-body">${igHtml}</div>
+    </div>`;
+}
+
+// ── SPONSORLUK TOGGLE
+function toggleSpCall(btn){
+  const body=document.getElementById('sp-call-body');
+  btn.classList.toggle('open');
+  body.classList.toggle('open');
+  const label=btn.querySelector('span:first-child');
+  label.textContent=body.classList.contains('open')?'KAPAT':'DETAYLARI GÖR';
+}
+function scrollToSponsorluk(){
+  document.getElementById('sponsorluk').scrollIntoView({behavior:'smooth'});
+  // Auto-open accordion
+  const btn=document.getElementById('sp-toggle-btn');
+  const body=document.getElementById('sp-call-body');
+  if(!body.classList.contains('open')){ btn.classList.add('open'); body.classList.add('open'); btn.querySelector('span:first-child').textContent='KAPAT'; }
+}
+function hideFlash(){
+  document.getElementById('sp-flash-bar').style.display='none';
+  sessionStorage.setItem('sp_flash_hidden','1');
+}
+// Hide flash if already dismissed this session
+if(sessionStorage.getItem('sp_flash_hidden')==='1'){
+  document.addEventListener('DOMContentLoaded',()=>{ const el=document.getElementById('sp-flash-bar'); if(el) el.style.display='none'; });
+}
+
+// ── TICKER
+function renderTicker(){
+  const news=getNews();
+  const inner=document.getElementById('ticker-inner');
+  if(!inner||!news.length) return;
+  const items=news.map(n=>`<a href="#haberler" class="ticker-item">
+    <span class="ti-dot">•</span><span class="ti-cat">${n.cat||'Haber'}</span>${n.title}
+  </a>`).join('');
+  inner.innerHTML=items+items; // çift kopya = sonsuz döngü
+}
+
+// ── NEWS
+function getYTThumb(url){
+  const m1=url.match(/youtube\.com\/watch\?v=([^&]+)/);
+  const m2=url.match(/youtu\.be\/([^?]+)/);
+  const id=m1?m1[1]:m2?m2[1]:'';
+  return id?`https://img.youtube.com/vi/${id}/hqdefault.jpg`:'';
+}
+
+function renderNews(){
+  const news=getNews();
+  const grid=document.getElementById('news-grid');
+  if(!grid) return;
+  if(!news.length){grid.innerHTML='<p style="color:var(--gy);text-align:center;padding:48px;grid-column:1/-1">Henüz haber yok.</p>';return;}
+  grid.innerHTML=news.map(n=>{
+    let mediaHtml='';
+    if(n.mediaType==='img'&&n.mediaSrc){
+      mediaHtml=`<div class="news-media"><img src="${n.mediaSrc}" alt="${n.title}" loading="eager"></div>`;
+    } else if(n.mediaType==='video'&&n.mediaSrc){
+      const thumb=getYTThumb(n.mediaSrc);
+      mediaHtml=`<div class="news-media" style="cursor:pointer" onclick="openVid('${n.mediaSrc}')">
+        ${thumb?`<img src="${thumb}" alt="" loading="eager">`:''}
+        <div class="vid-overlay"><div class="play-btn">▶</div></div>
+      </div>`;
+    }
+    const btn=n.btnUrl?`<a href="${n.btnUrl}" class="news-btn">${n.btnText||'Devamını Oku →'}</a>`:
+              (n.btnText?`<span class="news-btn news-btn-passive">${n.btnText}</span>`:'');
+    const cls=n.featured=='1'?'news-card news-featured':'news-card';
+    return `<article class="${cls}">${mediaHtml}
+      <div class="news-body-wrap">
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <div class="news-cat">${n.cat||''}</div>
+          <div class="news-date">${fmtDate(n.date)}</div>
+        </div>
+        <h3 class="news-title">${n.title}</h3>
+        <p class="news-body">${n.body}</p>
+        ${btn}
+      </div>
+    </article>`;
+  }).join('');
+}
+
+// ── VIDEO MODAL
+function openVid(url){
+  const modal=document.getElementById('vid-modal');
+  const inner=document.getElementById('vid-modal-inner');
+  let html='<div class="vid-modal-close" onclick="closeVidBtn()">✕ KAPAT</div>';
+  if(url.includes('youtube')||url.includes('youtu.be')){
+    const m1=url.match(/youtube\.com\/watch\?v=([^&]+)/);
+    const m2=url.match(/youtu\.be\/([^?]+)/);
+    const id=m1?m1[1]:m2?m2[1]:'';
+    if(id) html+=`<iframe src="https://www.youtube.com/embed/${id}?autoplay=1" allowfullscreen allow="autoplay"></iframe>`;
+  } else if(url.includes('vimeo')){
+    const id=url.match(/vimeo\.com\/(\d+)/)?.[1];
+    if(id) html+=`<iframe src="https://player.vimeo.com/video/${id}?autoplay=1" allowfullscreen allow="autoplay"></iframe>`;
+  } else {
+    html+=`<video src="${url}" controls autoplay style="width:100%;aspect-ratio:16/9"></video>`;
+  }
+  inner.innerHTML=html;
+  modal.classList.add('on');
+  document.body.style.overflow='hidden';
+}
+function closeVid(e){if(e.target===document.getElementById('vid-modal'))closeVidBtn();}
+function closeVidBtn(){
+  document.getElementById('vid-modal').classList.remove('on');
+  document.getElementById('vid-modal-inner').innerHTML='';
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeLB();closeVidBtn();}});
+
+// ── SPONSORS
+function renderSponsors(){
+  const sponsors=getSponsors();
+  const container=document.getElementById('sponsor-logos');
+  if(!container) return;
+  const tierLabel={gold:'🥇 Altın Sponsor',silver:'🥈 Gümüş Sponsor',bronze:'🥉 Bronz Sponsor',partner:'🤝 İş Ortağı'};
+  const tierClass={gold:'sp-gold',silver:'sp-silver',bronze:'sp-bronze',partner:'sp-partner'};
+  const order={gold:0,silver:1,bronze:2,partner:3};
+  if(!sponsors.length){
+    container.innerHTML='<div class="sponsor-empty" style="width:100%">Henüz sponsor eklenmedi. <a href="admin.html" style="color:var(--o)">Admin panelinden ekleyin →</a></div>';
+    return;
+  }
+  const sorted=[...sponsors].sort((a,b)=>(order[a.tier]||3)-(order[b.tier]||3));
+  container.innerHTML=sorted.map(sp=>{
+    const logoHtml=sp.logotype==='img'&&sp.logo
+      ?`<img src="${sp.logo}" alt="${sp.name}">`
+      :`<div class="sp-no-logo">${sp.logo||'🏢'}</div>`;
+    return `<div class="sponsor-card">${logoHtml}
+      <div class="sp-name">${sp.name}</div>
+      <div class="sp-tier ${tierClass[sp.tier]||'sp-partner'}">${tierLabel[sp.tier]||sp.tier}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── INIT
+renderTicker();
+renderNews();
+renderSponsors();
+renderSocialFooter();
+renderEmbeds();
+
+
+function tick(){
+  const t=new Date('2026-06-12T09:00:00+03:00')-new Date();
+  if(t<=0){document.getElementById('cdt').innerHTML='<span style="font-family:Bebas Neue;font-size:22px;letter-spacing:4px">YARIŞ BAŞLADI! 🏁</span>';return}
+  const pad=n=>String(Math.floor(n)).padStart(2,'0');
+  document.getElementById('cdg').textContent=pad(t/86400000);
+  document.getElementById('cds').textContent=pad(t%86400000/3600000);
+  document.getElementById('cdm').textContent=pad(t%3600000/60000);
+  document.getElementById('cdk').textContent=pad(t%60000/1000);
+}
+tick();setInterval(tick,1000);
+
+// Gallery lightbox
+const imgs=[...document.querySelectorAll('.gitem img')].map(i=>i.src);
+let cur=0;
+document.querySelectorAll('.gitem').forEach(el=>el.addEventListener('click',()=>{
+  cur=+el.dataset.idx;
+  document.getElementById('lb-img').src=imgs[cur];
+  document.getElementById('lb').classList.add('on');
+  document.body.style.overflow='hidden';
+}));
+function closeLB(e){if(!e||e.target===document.getElementById('lb')||e.target.classList.contains('lb-x')){document.getElementById('lb').classList.remove('on');document.body.style.overflow='';}}
+function lbNav(d,e){e&&e.stopPropagation();cur=(cur+d+imgs.length)%imgs.length;document.getElementById('lb-img').src=imgs[cur];}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1);});
+
+// File name display
+function showFile(inp,id){
+  document.getElementById(id).textContent=inp.files[0]?inp.files[0].name:'Dosya seçilmedi';
+}
+
+// Form submit
+function submitForm(e){
+  e.preventDefault();
+  const form = e.target;
+  const btn  = form.querySelector('button[type=submit]');
+  const data = new FormData(form);
+  btn.textContent='GÖNDERİLİYOR...'; btn.disabled=true;
+
+  // 1) Netlify Forms'a gönder
+  fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:new URLSearchParams(Array.from(data.entries()).filter(([k,v])=>!(v instanceof File))).toString()
+  })
+  .then(function(res){
+    if(res.ok||res.status===200||res.status===303){
+      showSuccess(form,btn);
+    } else { tryMailto(data,btn); }
+  })
+  .catch(function(){ tryMailto(data,btn); });
+}
+
+function showSuccess(form,btn){
+  btn.textContent='✓ GÖNDERİLDİ';
+  const msg=document.getElementById('success-msg');
+  msg.innerHTML='✅ Kayıt formunuz başarıyla iletildi!<br><small style="font-size:12px;opacity:.7">En kısa sürede sizinle iletişime geçeceğiz.<br>📧 greenwayuludag2026@gmail.com · 📞 0 (531) 085 43 90</small>';
+  msg.style.display='block';
+  form.reset();
+  ['dekont-name','lisans-name'].forEach(function(id){
+    var el=document.getElementById(id); if(el) el.textContent='Dosya seçilmedi';
+  });
+  msg.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function tryMailto(data,btn){
+  var ad    = data.get('ad_soyad')||'';
+  var tel   = data.get('telefon')||'';
+  var motor = data.get('marka')||'';
+  var il    = data.get('il')||'';
+  var sub   = encodeURIComponent('Greenway Uludağ 2026 Kayıt – '+ad);
+  var body  = encodeURIComponent(
+    'AD SOYAD: '+ad+'\nTELEFON: '+tel+'\nİL: '+il+'\nMOTOR: '+motor+
+    '\n\nBu form warm-conkies-0c6782.netlify.app üzerinden gönderilmiştir.'
+  );
+  window.open('mailto:greenwayuludag2026@gmail.com,feryay@gmail.com?subject='+sub+'&body='+body,'_blank');
+  btn.textContent='KAYDI TAMAMLA →'; btn.disabled=false;
+}
+
+// YouTube hero bg — iframe yüklenemezse poster göster
+(function(){
+  var wrap = document.getElementById('hero-yt-wrap');
+  var fallback = document.getElementById('hero-img-fallback');
+  if(fallback) fallback.style.display='none';
+  // 4 saniye içinde yüklenemezse fallback
+  setTimeout(function(){
+    if(wrap && wrap.querySelector('iframe')){
+      // iframe yüklendi, fallback gizle
+    } else {
+      if(wrap) wrap.style.display='none';
+      if(fallback) fallback.style.display='block';
+    }
+  }, 4000);
+})();
+
+// Türkçe büyük harf güvencesi
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.stag,.eyebrow,.hstat-l,.pg-sub,.info-lbl,.ccard-t,.cd-ul').forEach(function(el){
+    el.childNodes.forEach(function(node){
+      if(node.nodeType===3&&node.textContent.trim()){
+        node.textContent=node.textContent.toLocaleUpperCase('tr-TR');
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
